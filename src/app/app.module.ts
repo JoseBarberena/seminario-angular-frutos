@@ -7,6 +7,7 @@ import { ListaFrutosComponent } from './lista-frutos/lista-frutos.component';
 import { FrutosAboutComponent } from './frutos-about/frutos-about.component';
 import { FrutosSecosComponent } from './frutos-secos/frutos-secos.component';
 import { FrutosCarritoComponent } from './frutos-carrito/frutos-carrito.component';
+import { InputFrutosComponent } from './input-frutos/input-frutos.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FrutosCarritoComponent } from './frutos-carrito/frutos-carrito.componen
     ListaFrutosComponent,
     FrutosAboutComponent,
     FrutosSecosComponent,
-    FrutosCarritoComponent
+    FrutosCarritoComponent,
+    InputFrutosComponent
   ],
   imports: [
     BrowserModule,

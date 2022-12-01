@@ -22,9 +22,7 @@
       <td >{{frutos.precio | currency}}</td>
       <td *ngIf="frutos.promocion==true"><span class="glyphicon glyphicon-remove " aria-hidden="true"></span><span class="text-decoration-line-through">{{frutos.preciopromo | currency}}</span></td>
       <td *ngIf="frutos.promocion==false"><span class="glyphicon glyphicon-remove " aria-hidden="true"></span><span class="text-decoration-line-through">-</span></td>
-      <td><button class="btn btn-primary btn-sm" (click)="downCantidad(frutos)">-</button>
-      <input type="number" class="small input" [(ngModel)]="frutos.cantidad" (focusout)="chequeoCantidadFrutos(frutos)">
-      <button class="btn btn-primary btn-sm" (click)="upCantidad(frutos)">+</button></td>
+      <td><app-input-frutos [(cantidad)]="frutos.cantidad" [maximo]="frutos.stock" *ngIf="frutos.stock"></app-input-frutos></td>
     </tr>
   </tbody>
 
