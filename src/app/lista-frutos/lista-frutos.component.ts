@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FrutosCartService } from '../frutos-cart.service';
 import { Fruto } from './frutos';
 
 
@@ -20,40 +21,50 @@ export class ListaFrutosComponent implements OnInit {
       "cantidad": 0,
     },
     {
-      "detalle":"Castañas de Caju",
+      "detalle":"Nueces de Pecan",
       "stock":5,
       "precio":2600,
-      "preciopromo":3200,
+      "preciopromo":1750,
       "imagen": "assets/img/pecan.jpeg",
       "promocion": false,
       "cantidad": 0,
     },
     {
-      "detalle":"Castañas de Caju",
-      "stock":50,
-      "precio":2600,
-      "preciopromo":3200,
+      "detalle":"Avellanas",
+      "stock":0,
+      "precio":1850,
+      "preciopromo":2270,
       "imagen": "assets/img/pecan.jpeg",
       "promocion": false,
       "cantidad": 0,
 
     },
     {
-      "detalle":"Castañas de Caju",
-      "stock":0,
-      "precio":2600,
+      "detalle":"Almendras",
+      "stock":10,
+      "precio":5200,
       "imagen": "assets/img/pecan.jpeg",
       "promocion": true,
-      "preciopromo":3200,
+      "preciopromo":6520,
       "cantidad": 0,
 
     },
   ]
 
-  constructor() { }
+
+  constructor(private cart: FrutosCartService) {
+
+   }
 
   ngOnInit(): void {
   }
+
+  addToCart(frutos: any): void{
+    this.cart.addToCart(frutos);
+    frutos.stock -= frutos.cantidad;
+    frutos.cantidad = 0;
+  }
+
 
   upCantidad(frutos: Fruto): void {
     if(frutos.cantidad < frutos.stock)

@@ -7,8 +7,8 @@
       <th>Stock</th>
       <th>Precio</th>
       <th>Precio sin Promo</th>
+      <th>Cantidad</th>
       <th>Compra</th>
-
 
     </tr>
   </thead>
@@ -22,8 +22,11 @@
       <td >{{frutos.precio | currency}}</td>
       <td *ngIf="frutos.promocion==true"><span class="glyphicon glyphicon-remove " aria-hidden="true"></span><span class="text-decoration-line-through">{{frutos.preciopromo | currency}}</span></td>
       <td *ngIf="frutos.promocion==false"><span class="glyphicon glyphicon-remove " aria-hidden="true"></span><span class="text-decoration-line-through">-</span></td>
-      <td><app-input-frutos [(cantidad)]="frutos.cantidad" [maximo]="frutos.stock" *ngIf="frutos.stock"></app-input-frutos></td>
-    </tr>
+      <td>
+          <app-input-frutos [(cantidad)]="frutos.cantidad" [maximo]="frutos.stock" *ngIf="frutos.stock"></app-input-frutos></td>
+          <button class="btn" (click)="addToCart(frutos)">Comprar</button>
+
+      </tr>
   </tbody>
 
 </table>
