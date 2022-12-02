@@ -16,7 +16,7 @@ export class ListaFrutosComponent implements OnInit {
       "stock":10,
       "precio":2600,
       "preciopromo":3200,
-      "imagen": "assets/img/pecan.jpeg",
+      "imagen": "assets/img/castana.jpeg",
       "promocion": true,
       "cantidad": 0,
     },
@@ -34,7 +34,7 @@ export class ListaFrutosComponent implements OnInit {
       "stock":0,
       "precio":1850,
       "preciopromo":2270,
-      "imagen": "assets/img/pecan.jpeg",
+      "imagen": "assets/img/avellana.jpeg",
       "promocion": false,
       "cantidad": 0,
 
@@ -43,12 +43,13 @@ export class ListaFrutosComponent implements OnInit {
       "detalle":"Almendras",
       "stock":10,
       "precio":5200,
-      "imagen": "assets/img/pecan.jpeg",
+      "imagen": "assets/img/almendra.jpeg",
       "promocion": true,
       "preciopromo":6520,
       "cantidad": 0,
 
     },
+
   ]
 
 
